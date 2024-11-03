@@ -1,0 +1,42 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.title-container {
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(21, 112, 13);
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.option-button {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #a4ceae;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

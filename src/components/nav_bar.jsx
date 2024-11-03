@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import UserIcon from '../assets/user-icon.jpg'
 
 export const NavBar = () => {
   const navLinkClass = ({ isActive }) => {
@@ -12,14 +13,9 @@ export const NavBar = () => {
       <NavLink
         className={navLinkClass}
         to='/'
+        style={{position:'relative', left:350}}
       >
-        Inicio
-      </NavLink>
-      <NavLink
-        className={navLinkClass}
-        to='/lightbulb'
-      >
-        Ampolleta
+        <img src={UserIcon} style={{width:50, height: 50}}/>
       </NavLink>
     </nav>
   )

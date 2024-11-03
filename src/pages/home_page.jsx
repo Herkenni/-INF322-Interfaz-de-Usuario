@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import backgroundImage from '../assets/pantalla.png';
+import Ingreso from '../components/ingreso';
+import '../stylesheets/home_page/home_page.scss';
 
-export const HomePage = () => {
+const HomePage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
-    <>
-      <p>¡Te damos la bienvenida a la Interfaz energética!</p>
-      <p>En esta página encontraras una 💡 ampolleta que podrás encender y apagar con un botón</p>
-    </>
-  )
-}
+    <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="title-container">
+        <h1 className="title">ReciclApp</h1>
+      </div>
+      <div className="button-container">
+        <button className="option-button" onClick={openModal}>Usuario</button>
+        <button className="option-button" onClick={openModal}>Trabajador</button>
+      </div>
+      {isModalOpen && <Ingreso onClose={closeModal} />}
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
