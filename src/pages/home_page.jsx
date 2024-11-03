@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="title-container">
-        <h1 className="title">Reciclaje Inteligente</h1>
+        <h1 className="title">ReciclApp</h1>
       </div>
       <div className="button-container">
         <button className="option-button" onClick={openModal}>Usuario</button>
