@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import '../stylesheets/info/info.scss';
 import Close from '../assets/close.png';
 import MoreInfo from '../assets/more-info.png';
+import Tutorial from '../components/tutorial';
 
 const Info = ({ onClose }) => {
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="modal">
@@ -12,7 +17,7 @@ const Info = ({ onClose }) => {
         <button style={{position:'relative',height: 50,width:50, left:-110, top:-20, backgroundColor:'rgb(255,100,100)'}} onClick={onClose}>
             <img style={{height:30,width:30}} src={Close}/>
         </button>
-        <button style={{position:'relative',height: 50,width:50, left:110, top:-20, backgroundColor:'rgb(255,255,0)'}} onClick={onClose}>
+        <button style={{position:'relative',height: 50,width:50, left:110, top:-20, backgroundColor:'rgb(255,255,0)'}} onClick={openModal}>
             <img style={{height:30,width:30}} src={MoreInfo}/>
         </button>
         <div style={{padding:10,flex:1}}>
@@ -26,7 +31,9 @@ const Info = ({ onClose }) => {
 
         </div>
       </div>
+      {isModalOpen && <Tutorial onClose={closeModal} />}
     </div>
+    
   );
 };
 

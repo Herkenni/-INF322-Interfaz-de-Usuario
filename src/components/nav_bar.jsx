@@ -9,11 +9,10 @@ export const NavBar = () => {
     return classes.join(' ')
   }
   return (
-    <nav className='nav-bar'>
+    <nav className='nav-bar' style={{alignContent:'end'}}>
       <NavLink
         className={navLinkClass}
         to='/'
-        style={{position:'relative', left:350}}
       >
         <img src={UserIcon} style={{width:50, height: 50}}/>
       </NavLink>
