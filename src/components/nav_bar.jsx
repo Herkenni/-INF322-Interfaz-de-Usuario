@@ -1,23 +1,21 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import UserIcon from '../assets/user-icon.jpg'
+
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Usuario from './usuario.jsx';
+import '../stylesheets/nav-bar/index.scss';
 
 export const NavBar = () => {
   const navLinkClass = ({ isActive }) => {
-    const classes = ['nav-bar__link']
-    if (isActive) classes.push('nav-bar__link--active')
-    return classes.join(' ')
-  }
+    const classes = ['nav-bar__link'];
+    if (isActive) classes.push('nav-bar__link--active');
+    return classes.join(' ');
+  };
+
   return (
-    <nav className='nav-bar' style={{alignContent:'end'}}>
-      <NavLink
-        className={navLinkClass}
-        to='/'
-      >
-        <img src={UserIcon} style={{width:50, height: 50}}/>
-      </NavLink>
+    <nav className="nav-bar" style={{ alignContent: 'end' }}>
+      <Usuario />
     </nav>
-  )
-}
- 
-export default NavBar
+  );
+};
+
+export default NavBar;
