@@ -17,13 +17,14 @@ const MapaPage = () => {
     <div>
       <NavBar/>
       <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
-                  <button  onClick={openModal} style={{position:'relative', top: 400, left: 100 , width: 45, height: 45, backgroundColor: 'green',borderRadius: 45, padding:5}} >
+
+                  <button  onClick={openModal} style={{position:'relative', top: 300, left: 100 , width: 45, height: 45, backgroundColor: 'green',borderRadius: 45, padding:5}} >
                       <img style={{ width: 30, height: 30}} src={Papel}/>
                   </button>
-                  <button  onClick={openModal} style={{position:'relative', top: 600, left: -60 , width: 45, height: 45, backgroundColor: 'red',borderRadius: 45, padding:5}} >
+                  <button  onClick={openModal} style={{position:'relative', top: 500, left: -60 , width: 45, height: 45, backgroundColor: 'red',borderRadius: 45, padding:5}} >
                       <img style={{width: 30, height: 30}} src={Vidrio}/>
                   </button>
-                  <button  onClick={openModal} style={{position:'relative', top: 500, left: 100 , width: 45, height: 45, backgroundColor: 'yellow',borderRadius: 45, padding:5}} >
+                  <button  onClick={openModal} style={{position:'relative', top: 400, left: 100 , width: 45, height: 45, backgroundColor: 'yellow',borderRadius: 45, padding:5}} >
                       <img style={{width: 30, height: 30}} src={Plastico}/>
                   </button>
                   
