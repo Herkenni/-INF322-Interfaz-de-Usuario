@@ -3,8 +3,10 @@ import backgroundImage from '../assets/mapa.png';
 import Papel from '../assets/Papel.png'
 import Plastico from '../assets/Plastico.png'
 import Vidrio from '../assets/Vidrio.png'
+import usuario_imagen from '../assets/Usuario_imagen.png'
 import NavBar from '../components/nav_bar.jsx';
 import Info from '../components/info.jsx';
+import Usuario from '../components/usuario.jsx';
 
 const MapaPage = () => {
 
@@ -26,6 +28,9 @@ const MapaPage = () => {
                   </button>
                   <button  onClick={openModal} style={{position:'relative', top: 400, left: 100 , width: 45, height: 45, backgroundColor: 'yellow',borderRadius: 45, padding:5}} >
                       <img style={{width: 30, height: 30}} src={Plastico}/>
+                  </button>
+                  <button  onClick={openModal} style={{position:'relative', top: 50, left: -120 , width: 45, height: 45, backgroundColor: 'grey-white',borderRadius: 45, padding:5}} >
+                      <img style={{width: 30, height: 30}} src={usuario_imagen}/>
                   </button>
                   
       </div>
