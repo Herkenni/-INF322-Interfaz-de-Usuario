@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Usuario from './usuario.jsx';
+import Setting from './settings.jsx'
 import '../stylesheets/nav-bar/index.scss';
 
 export const NavBar = () => {
@@ -14,6 +14,7 @@ export const NavBar = () => {
   return (
     <nav className="nav-bar" style={{ alignContent: 'end' }}>
       <Usuario />
+      <Setting />
     </nav>
   );
 };
