@@ -20,7 +20,7 @@ npm install
 Launch environment
 
 ```
-npm run dev
+npx webpack serve
 ```
 
 Now you can open http://localhost:5050
